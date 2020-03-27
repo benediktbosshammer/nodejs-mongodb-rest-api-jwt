@@ -1,0 +1,41 @@
+GET http://localhost:3000/notes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTdkZDAwZDhiYTIwMjRmZjAwNTE0MjkiLCJpYXQiOjE1ODUzMDU2MTl9.di3BmrRQrGqHOHQj_WSMotA_tdmxN6pTOyjBXeZEVLA
+###
+GET http://localhost:3000/notes/5e7c83105c96e63ee05e04b5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTdkZDAwZDhiYTIwMjRmZjAwNTE0MjkiLCJpYXQiOjE1ODUzMDU2MTl9.di3BmrRQrGqHOHQj_WSMotA_tdmxN6pTOyjBXeZEVLA
+###
+POST http://localhost:3000/notes
+Content-Type: application/json
+
+{
+    "title": "How to install MongoDB",
+    "content": "https://www.youtube.com/watch?v=wcx3f0eUiAw"
+}
+###
+DELETE http://localhost:3000/notes/5e7c83105c96e63ee05e04b5
+###
+PATCH http://localhost:3000/notes/5e7c83105c96e63ee05e04b5
+Content-Type: application/json
+
+{
+    "content": "Visit https://www.youtube.com/watch?v=wcx3f0eUiAw"
+}
+
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "name": "benebo3105",
+    "password": "password1234"
+}
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "name": "benebo3105",
+    "password": "password1234"
+}
